@@ -15,8 +15,8 @@ setup(
     platforms=["linux"],
     entry_points={
         "console_scripts": [
-            "plot-delay = timeanalysis.delay:main",
-            "plot-tvt = timeanalysis.tvt:main"
+            "plot-delay = timeanalysis.plot_delay:main",
+            "plot-tvt = timeanalysis.plot_tvt:main"
         ]
     },
 )

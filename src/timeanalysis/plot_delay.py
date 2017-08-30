@@ -43,7 +43,8 @@ if not args.no_fit:
     for d, p, l in zip(data, patches, label):
         mu, sigma = np.mean(d), np.std(d)
         print(l, mu, sigma)
-        c = np.array(p[0].get_facecolor()) * 0.5
+        if isinstance(p, list): p = p[0]
+        c = np.array(p.get_facecolor()) * 0.5
         c[3] = 1
         x = np.linspace(start, bins[-1], args.fit_points)
         y = mlab.normpdf(x, mu, sigma)
